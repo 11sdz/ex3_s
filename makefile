@@ -3,8 +3,9 @@ CFLAGS = -Wall
 TARGET = main.o string_prog.o string_prog.h
 
 mains: main.o libprogstring.a
-	$(CC) $(CFLAGS) -g -o stringProgram main.o ./libprogstring.a -lm
-all: mains
+	$(CC) $(CFLAGS) -g -o stringProg main.o ./libprogstring.a -lm
+all: mains run
+run: ./stringProgram < input.txt
 
 main.o: main.c
 	$(CC) $(CFLAGS) -c main.c -lm

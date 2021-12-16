@@ -17,8 +17,6 @@ char text[TXT+1];
 int word_counter=0;
 int text_counter=0;
 bool is_word=True;
-printf("15 line ");
-printf("17 line ");
 char c;
 while(c!='~'){
     c =getchar();
@@ -36,9 +34,7 @@ while(c!='~'){
         }
 }
 text[text_counter]='\0';
-printf("%s ,%d\n",word,word_counter);
-printf("%s ,%d\n",text,text_counter);
 print_same_gimmetry(word_counter,text_counter,word,text);
 print_atbash(word_counter,text_counter,word,text);
-// print_minimum_contains(word_counter,text_counter,word,text);
+print_minimum_contains(word_counter,text_counter,word,text);
 }

@@ -17,7 +17,7 @@ void print_same_gimmetry(int , int , char[] , char[]);
 
 void print_atbash(int , int , char[] , char[]);
 
-// void print_minimum_contains(int , int , char[] , char[]);
+void print_minimum_contains(int , int , char[] , char[]);
 
 
 #endif
