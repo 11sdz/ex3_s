@@ -16,4 +16,4 @@ libprogstring.a: $(TARGET)
 	ar -rcs libprogstring.a string_prog.o
 
 clean: 
-	rm -f *.o *.a stringProgram
+	rm -f *.o *.a stringProg
