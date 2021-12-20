@@ -9,7 +9,6 @@ typedef enum bool {
 	True=1,
 	False=0
 	}bool;
-
 int main(){
 char word[WORD+1];
 char text[TXT+1];
