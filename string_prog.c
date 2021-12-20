@@ -15,7 +15,7 @@ int sum_word(int size, char word[size]){
             int c= (int) word[i]- (int)'A';
             c=c+1;//A = 1
             sum=sum+c;
-        }else{
+        }else if(islower(word[i])){
             int c= (int) word[i]- (int)'a';
             c=c+1;//a = 1
             sum=sum+c;
@@ -90,6 +90,8 @@ void copy_attbash(int size, char word[size], char word_atbsh[size]){
             int asci_val=(int)word[i]-(int)'z';
             asci_val=abs(asci_val)+(int)'a';
             word_atbsh[i]=(char) asci_val;
+        }else if(!isspace(word[i])){
+            word_atbsh[i]=word[i];
         }
         i+=1;
     }
@@ -128,7 +130,7 @@ void print_atbash(int word_size ,int text_size,char word[word_size], char text[t
         if(word_atbsh[0]==text[i]){
             int index=1;
             for(int j=i+1;j<text_size;j++){
-                if(islower(text[j]) || isupper(text[j])){
+                if((!isspace(text[i]) )&& (islower(text[i]) || isupper(text[i]))){
                     if(text[j]==word_atbsh[index]){
                         index+=1;
                     }else{
@@ -177,7 +179,7 @@ void print_minimum_contains(int word_size ,int text_size,char word[word_size], c
     for(int i=0;i<text_size;i++){
         initialize_counter(word_size,word,counter);
         int index=(int) text[i];
-        if(islower(text[i]) || isupper(text[i])){
+        if((!isspace(text[i]) )&& (islower(text[i]) || isupper(text[i]))){
             if(counter[index]>0){
                 int num_of_letters=word_size;
                 for(int j=i;j<text_size;j++){
