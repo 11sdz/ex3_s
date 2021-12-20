@@ -36,7 +36,7 @@ void print_same_gimmetry(int word_size ,int text_size,char word[word_size], char
     int sum=sum_word(word_size , word);
     int cur_sum=0;
     int i=0;
-    int j=1;
+    int j=0;
     bool first_print=True;
     printf("Gematria Sequences: ");
     while(text[i]!='\0'){
@@ -207,6 +207,7 @@ void print_minimum_contains(int word_size ,int text_size,char word[word_size], c
             if(first_print){
                 first_print=False;
                 print_specific_word(end,i,text_size,text);
+                
             }else{
                 printf("~");
                 print_specific_word(end,i,text_size,text);
